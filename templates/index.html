@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Игра: Убей дракона</title>
+
+  <!-- Подключаем CSS из static/style.css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="game-card">
+    <h1>🐉 Убей дракона!</h1>
+    <p class="lead">Ты встретила огромного дракона. Выбери действие — и узнай исход битвы.</p>
+
+    <form method="post" style="text-align:center;">
+      <div class="controls">
+        <button class="button" type="submit" name="action" value="attack">Атаковать ⚔️</button>
+        <button class="button secondary" type="submit" name="action" value="run">Убежать 🏃‍♀️</button>
+      </div>
+    </form>
+
+    {% if message %}
+      <div class="result">{{ message }}</div>
+    {% else %}
+      <div class="result" style="opacity:0.7">Выбери действие, чтобы начать.</div>
+    {% endif %}
+  </div>
+</body>
+</html>

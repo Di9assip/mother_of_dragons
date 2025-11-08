@@ -1,0 +1,105 @@
+/* static/style.css */
+
+/* Базовые настройки страницы */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Подключаем красивый фон и задаём общий шрифт */
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: linear-gradient(180deg, #0f1724 0%, #10243a 100%);
+  color: #f3f6f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Контейнер игры — белый/полупрозрачный блок по центру */
+.game-card {
+  width: 100%;
+  max-width: 760px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* Заголовок */
+.game-card h1 {
+  font-size: 28px;
+  margin-bottom: 14px;
+  text-align: center;
+  letter-spacing: 0.6px;
+}
+
+/* Краткий текст */
+.game-card p.lead {
+  color: #d7e7ff;
+  opacity: 0.9;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Область кнопок — центрируем их и ставим gap */
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 16px 0 22px;
+}
+
+/* Стиль для кнопок */
+.button {
+  background: linear-gradient(180deg,#ff7a59 0%, #ff4a1e 100%);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 18px rgba(255,74,30,0.18);
+}
+
+/* Второй стиль кнопки (побег) */
+.button.secondary {
+  background: linear-gradient(180deg,#6aa8ff 0%, #2a74ff 100%);
+  box-shadow: 0 6px 18px rgba(42,116,255,0.12);
+}
+
+/* hover / active эффекты */
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+.button:active {
+  transform: translateY(0);
+}
+
+/* Результат — карточка под заголовком */
+.result {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+  .game-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+  .game-card h1 { font-size: 20px; }
+  .button { padding: 10px 14px; font-size: 14px; }
+}

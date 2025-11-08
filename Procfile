@@ -1,0 +1,1 @@
+web: gunicorn Dragon_game:app
