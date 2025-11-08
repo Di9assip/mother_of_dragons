@@ -1,23 +1,54 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Игра с драконом 🐉</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Добро пожаловать в логово дракона!</h1>
-        <img src="{{ url_for('static', filename='images/il_1080xN.4773360760_8s51.webp') }}" alt="Дракон" class="dragon-image">
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
 
-        <form method="POST">
-            <button type="submit" name="action" value="attack" class="btn attack">⚔️ Сразиться</button>
-            <button type="submit" name="action" value="run" class="btn run">🏃‍♀️ Убежать</button>
-        </form>
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
 
-        {% if message %}
-            <p class="message">{{ message }}</p>
-        {% endif %}
-    </div>
-</body>
-</html>
+.dragon-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(255, 100, 0, 0.6);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn.attack {
+    background-color: #e63946;
+}
+
+.btn.run {
+    background-color: #457b9d;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffb703;
+}
