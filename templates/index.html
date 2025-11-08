@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Игра с драконом 🐉</title>
+    <title>Игра с драконом 🐲</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,11 +12,11 @@
 
         <form method="POST">
             <button type="submit" name="action" value="attack" class="btn attack">⚔️ Сразиться</button>
-            <button type="submit" name="action" value="run" class="btn run">🏃‍♀️ Убежать</button>
+            <button type="submit" name="action" value="run" class="btn run">💨 Убежать</button>
         </form>
 
         {% if message %}
-            <p class="message">{{ message }}</p>
+        <div class="message">{{ message }}</div>
         {% endif %}
     </div>
 </body>

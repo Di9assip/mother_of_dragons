@@ -1,25 +1,26 @@
 body {
-    background-color: #121212;
+    background-color: #0b0b0b;
     color: #fff;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
     padding: 50px;
+    background-image: linear-gradient(to bottom right, #000000, #3a0000);
 }
 
 .container {
     max-width: 600px;
     margin: auto;
-    background: rgba(30, 30, 30, 0.8);
+    background: rgba(30, 30, 30, 0.9);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
 }
 
 .dragon-image {
     width: 100%;
     border-radius: 10px;
     margin: 20px 0;
-    box-shadow: 0 0 15px rgba(255, 100, 0, 0.6);
+    box-shadow: 0 0 25px rgba(255, 50, 0, 0.7);
 }
 
 .btn {
@@ -32,23 +33,28 @@ body {
     cursor: pointer;
     color: white;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn.attack {
     background-color: #e63946;
+    box-shadow: 0 0 10px #ff4d4d;
 }
 
 .btn.run {
     background-color: #457b9d;
+    box-shadow: 0 0 10px #4fa3ff;
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
 .message {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 22px;
     color: #ffb703;
+    text-shadow: 0 0 10px #ff0000;
 }
